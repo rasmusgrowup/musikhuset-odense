@@ -1,0 +1,63 @@
+@import "core";
+
+.main {
+  width: 100%;
+}
+
+.top {
+  border-bottom: var(--border);
+  display: flex;
+  //height: 250px;
+
+  .about,
+  .contact,
+  .info,
+  .nav {
+    border-right: var(--border);
+    flex: 1;
+    padding: 2rem;
+
+    a {
+      display: block;
+      line-height: 1.5;
+    }
+
+    .active {
+      color: var(--red);
+    }
+
+    .name {
+      margin-top: 0.5rem;
+    }
+  }
+
+  .about .p {
+    //font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .info div {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav {
+    border-right: none;
+  }
+}
+
+.p strong {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 0.5rem;
+}
+
+.bottom {
+  align-items: center;
+  //border-top: var(--border);
+  display: flex;
+  font-size: 14px;
+  height: 100px;
+  justify-content: space-between;
+  padding: 2rem;
+}

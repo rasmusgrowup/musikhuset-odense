@@ -1,13 +1,13 @@
 import SectionRenderer from "@/components/Sections/SectionRenderer";
+import Shop from '@/public//Musikhuset-Odense-101-2.jpg'
 
 const Sections = [{
     type: 'fullwidth',
     align: 'left',
     heading: 'Om Musikhuset-Odense',
     image: {
-        url: '/Musikhuset-Odense-101-2.jpg',
-        height: 1067,
-        width: 1600
+        url: Shop,
+        alt: 'Claus Vang, fra Musikhuset-Odense'
     },
     text: [
         'Musikhuset-Odense er en noget så sjældent som en "rigtig" musikinstrumentforretning.',

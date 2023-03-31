@@ -1,13 +1,14 @@
 import SectionRenderer from "@/components/Sections/SectionRenderer";
+import ClausVang from '@/public//Musikhuset-Odense-122.jpg'
+import ClausHolm from '@/public//Musikhuset-Odense-150.jpg'
 
 const Sections = [{
     type: 'fourths',
     first: [{
         heading: 'Claus Vang',
         image: {
-            url: '/Musikhuset-Odense-122.jpg',
-            height: 1067,
-            width: 1600
+            url: ClausVang,
+            alt: 'Claus Vang'
         },
         text: [
             'Claus Vang er butiksindehaver, og musiker gennem mange år.',
@@ -28,9 +29,8 @@ const Sections = [{
     second: [{
         heading: 'Claus Christiansen',
         image: {
-            url: '/Musikhuset-Odense-150.jpg',
-            height: 1067,
-            width: 1600
+            url: ClausHolm,
+            alt: 'Claus Holm'
         },
         text: [
             'Claus Christiansen arbejder på værkstedet, hvor han passioneret reparerer og justerer instrumenter.',

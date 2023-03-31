@@ -11,8 +11,7 @@ export default function FullWidth({ section, i }) {
             }
             { section.image &&
                 <div className={sections.img}>
-                    <Image src={section.image.url} alt={'Alt Text'} height={section.image.height}
-                       width={section.image.width} priority={i === 0} quality='100'/>
+                    <Image src={section.image.url} alt={section.image.alt} priority={i === 0} quality='100'/>
                 </div>
             }
             { section.text.map((text, i) => (

@@ -42,8 +42,6 @@ function ImageContainer({ props, i }) {
                 alt={props.image.alt}
                 quality='100'
                 priority={ i === 0 }
-                width={props.image.width}
-                height={props.image.height}
             />
         </div>
     )

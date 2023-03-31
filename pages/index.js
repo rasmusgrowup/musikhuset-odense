@@ -1,13 +1,11 @@
 import Image from 'next/image'
 import styles from '@/styles/layout.module.scss'
-import type from '@/styles/type.module.scss'
-import HERO from '@/public/Musikhuset-Odense-251.jpg'
-import PRODUCTS from '@/public/Musikhuset-Odense-168.jpg'
-import ELECTRICS from '@/public/Musikhuset-Odense-171.jpg'
-import VIOLINS from '@/public/Musikhuset-Odense-190.jpg'
-import ACOUSTICS from '@/public/Musikhuset-Odense-413.jpg'
-import WORKSHOP from '@/public/Musikhuset-Odense-256.jpg'
-import STAR from '@/public/star.png'
+import ClausVang from '@/public/Musikhuset-Odense-251.jpg'
+import SpanskeGuitarer from '@/public/Musikhuset-Odense-413.jpg'
+import Violiner from '@/public/Musikhuset-Odense-190.jpg'
+import ElektriskeGuitarer from '@/public/Musikhuset-Odense-171.jpg'
+import Vaerksted from '@/public/Musikhuset-Odense-256.jpg'
+
 import ALTA from '@/public/brands/Admira-Logo.png'
 import GEWA from '@/public/brands/Gewa-Guitars-Logo.png'
 import HOFNER from '@/public/brands/Hofner_Logo.png'
@@ -41,7 +39,7 @@ import PIRASTRO from '@/public/brands/Pirastro.jpg'
 import SHUBB from '@/public/brands/Shubb_logo.png'
 import MXR from '@/public/brands/MXR_Logo.png'
 import DUNLOP from '@/public/brands/DUNLOP_Logo.png'
-import Linker from "@/components/Linker";
+
 import SectionRenderer from "@/components/Sections/SectionRenderer";
 
 const Sections = [
@@ -50,9 +48,8 @@ const Sections = [
         align: 'right',
         heading: 'Lokal instrumentforretning i centrum af odense',
         image: {
-            url: '/Musikhuset-Odense-251.jpg',
-            height: 836,
-            width: 1200
+            url: ClausVang,
+            alt: 'Claus Vang fra Musikehuset-Odense'
         },
         text: [
             'Med mange års erfaring i branchen er Musikhuset-Odense en af de førende instrumentforretninger i Danmark, med speciale i strenge- og strygerinstrumenter. Med vores helt særlige værksted og samarbejdspartnere er vi også med til at puste nyt liv i gamle instrumenter, der har tabt gnisten.'
@@ -65,19 +62,16 @@ const Sections = [
         smallHeading: 'Samt tilbehør til slagtøj, blæs, strygere og guitarer.',
         images: [
             {
-                url: '/Musikhuset-Odense-413.jpg',
-                height: 1200,
-                width: 800
+                url: SpanskeGuitarer,
+                alt: 'Spanske Guitarer i Musikhuset-Odense'
             },
             {
-                url: '/Musikhuset-Odense-190.jpg',
-                height: 1200,
-                width: 800
+                url: Violiner,
+                alt: 'Akkustiske violiner i Musikhuset-Odense'
             },
             {
-                url: '/Musikhuset-Odense-171.jpg',
-                height: 1200,
-                width: 800
+                url: ElektriskeGuitarer,
+                alt: 'Elektriske Guitarer i Musikhuset-Odense'
             }
         ],
         text: [
@@ -97,9 +91,8 @@ const Sections = [
         align: 'left',
         heading: 'Reparation og justering af musikinstrumenter',
         image: {
-            url: '/Musikhuset-Odense-256.jpg',
-            height: 1432,
-            width: 1000
+            url: Vaerksted,
+            alt: 'Claus fra værkstedet i Musikhuset-Odense'
         },
         text: [
             'Claus Christiansen reparerer musikinstrumenter i vores værksted i Odense C. Vi kan både servicere nye og gamle instrumenter, omend der skal kigges på justering, reperation eller intonation af strengeinstrumenter, eller udskiftning af elektronik i pedaler, pickupper og lignende.',

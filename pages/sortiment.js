@@ -1,4 +1,5 @@
 import SectionRenderer from "@/components/Sections/SectionRenderer";
+import Shop from '@/public/Musikhuset-Odense-168.jpg'
 
 const Sections = [
     {
@@ -6,9 +7,8 @@ const Sections = [
         align: 'right',
         heading: 'Lokal instrumentforretning, i hjertet af Odense',
         image: {
-            url: '/Musikhuset-Odense-168.jpg',
-            height: 1432,
-            width: 1000
+            url: Shop,
+            alt: 'Musikhuset-Odense'
         },
         text: [
             'I vores sortiment af instrumenter, finder du et bredt udvalg af elektriske og akkustiske guitarer — også til venstrehåndede musikere — akkustiske og elektriske violiner og celi, samt et særligt udvalg af alternative folkeinstrumenter og specialinstrumenter.',

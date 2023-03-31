@@ -1,15 +1,17 @@
 import SectionRenderer from "@/components/Sections/SectionRenderer";
-import sections from '@/styles/sections.module.scss'
+import sections from '@/styles/sections.module.scss';
 import type from "@/styles/type.module.scss";
+import Image1 from '@/public/Musikhuset-Odense-251.jpg';
+import Image2 from '@/public/Musikhuset-Odense-168.jpg';
+import Image3 from '@/public/Musikhuset-Odense-413.jpg';
 
 const News = [
     {
         type: 'news',
         heading: 'Vi har endelig fået en ny hjemmeside',
         image: {
-            url: '/Musikhuset-Odense-251.jpg',
-            height: 1432,
-            width: 1000
+            url: Image1,
+            alt: 'Claus Vang fra Musikhuset-Odense'
         },
         text: [
             'Claus Christiansen reparerer musikinstrumenter i vores værksted i Odense C. Vi kan både servicere nye og gamle instrumenter, omend der skal kigges på justering, reperation eller intonation af strengeinstrumenter, eller udskiftning af elektronik i pedaler, pickupper og lignende.',
@@ -26,9 +28,8 @@ const News = [
         type: 'news',
         heading: 'Vi har endelig fået en ny hjemmeside',
         image: {
-            url: '/Musikhuset-Odense-168.jpg',
-            height: 1432,
-            width: 1000
+            url: Image2,
+            alt: 'Elektriske guitarer i Musikhuset-Odense'
         },
         text: [
             'Claus Christiansen reparerer musikinstrumenter i vores værksted i Odense C. Vi kan både servicere nye og gamle instrumenter, omend der skal kigges på justering, reperation eller intonation af strengeinstrumenter, eller udskiftning af elektronik i pedaler, pickupper og lignende.',
@@ -45,9 +46,8 @@ const News = [
         type: 'news',
         heading: 'Vi har endelig fået en ny hjemmeside',
         image: {
-            url: '/Musikhuset-Odense-413.jpg',
-            height: 1432,
-            width: 1000
+            url: Image3,
+            alt: 'Spanske guitarer i Musikhuset-Odense'
         },
         text: [
             'Claus Christiansen reparerer musikinstrumenter i vores værksted i Odense C. Vi kan både servicere nye og gamle instrumenter, omend der skal kigges på justering, reperation eller intonation af strengeinstrumenter, eller udskiftning af elektronik i pedaler, pickupper og lignende.',

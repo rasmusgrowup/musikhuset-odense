@@ -1,13 +1,13 @@
 import SectionRenderer from "@/components/Sections/SectionRenderer";
+import ClausHolm from '@/public/Musikhuset-Odense-282.jpg'
 
 const Sections = [{
     type: 'half',
     align: 'right',
     heading: 'Reparation og justering af musikinstrumenter',
     image: {
-        url: '/Musikhuset-Odense-282.jpg',
-        height: 1432,
-        width: 1000
+        url: ClausHolm,
+        alt: 'Claus Holm i værkstedet i Musikhuset-Odense'
     },
     text: [
         'Claus Christiansen reparerer musikinstrumenter i vores værksted i Odense C. Vi kan både servicere nye og gamle instrumenter, omend der skal kigges på justering, reperation eller intonation af strengeinstrumenter, eller udskiftning af elektronik i pedaler, pickupper og lignende.',

@@ -42,88 +42,84 @@ import SHUBB from '@/public/brands/Shubb_logo.png'
 import MXR from '@/public/brands/MXR_Logo.png'
 import DUNLOP from '@/public/brands/DUNLOP_Logo.png'
 import Linker from "@/components/Linker";
+import SectionRenderer from "@/components/Sections/SectionRenderer";
+
+const Sections = [
+    {
+        type: 'half',
+        align: 'right',
+        heading: 'Lokal instrumentforretning i centrum af odense',
+        image: {
+            url: '/Musikhuset-Odense-251.jpg',
+            height: 836,
+            width: 1200
+        },
+        text: [
+            'Med mange års erfaring i branchen er Musikhuset-Odense en af de førende instrumentforretninger i Danmark, med speciale i strenge- og strygerinstrumenter. Med vores helt særlige værksted og samarbejdspartnere er vi også med til at puste nyt liv i gamle instrumenter, der har tabt gnisten.'
+        ],
+        review: true
+    },
+    {
+        type: 'products',
+        heading: 'Stort udvalg af strenge- og strygerinstrumenter.',
+        smallHeading: 'Samt tilbehør til slagtøj, blæs, strygere og guitarer.',
+        images: [
+            {
+                url: '/Musikhuset-Odense-413.jpg',
+                height: 1200,
+                width: 800
+            },
+            {
+                url: '/Musikhuset-Odense-190.jpg',
+                height: 1200,
+                width: 800
+            },
+            {
+                url: '/Musikhuset-Odense-171.jpg',
+                height: 1200,
+                width: 800
+            }
+        ],
+        text: [
+            'Musikhuset-Odense er en af de førende instrumentforretninger i Danmark, med speciale i strenge- og strygerinstrumenter. I vores sortiment finder du et bredt udvalg af elektriske og akkustiske guitarer — også til venstrehåndede musikere — akkustiske og elektriske violiner og celi, samt et særligt udvalg af alternative folkeinstrumenter og specialinstrumenter.',
+            'Uanset hvilket instrument du spiller har vi også et endog meget stort udvalg i tilbehør. Strenge, buer, skulderstøtter, ventilolie, dæmpere, mundstykker, skind, trommestikker, tasker, etuier, kabler, remme m.m.'
+        ],
+        cta: [
+            {
+                type: 'link',
+                href: '/sortiment',
+                text: 'Læs mere om vores sortiment',
+            }
+        ]
+    },
+    {
+        type: 'half',
+        align: 'left',
+        heading: 'Reparation og justering af musikinstrumenter',
+        image: {
+            url: '/Musikhuset-Odense-256.jpg',
+            height: 1432,
+            width: 1000
+        },
+        text: [
+            'Claus Christiansen reparerer musikinstrumenter i vores værksted i Odense C. Vi kan både servicere nye og gamle instrumenter, omend der skal kigges på justering, reperation eller intonation af strengeinstrumenter, eller udskiftning af elektronik i pedaler, pickupper og lignende.',
+            'Kommer du forbi butikken, giver vi et uforpligtende tilbud på reperation eller justering af dit instrument.'
+        ],
+        cta: [
+            {
+                type: 'link',
+                href: '/vaerksted',
+                text: 'Læs mere om værkstedet',
+                arrow: true
+            }
+        ]
+    }
+]
 
 export default function Home() {
     return (
         <>
-            <section className={styles.hero}>
-                <div className={styles.img}>
-                    <Image src={HERO} alt='Claus i butikken' quality='100' priority='true'/>
-                </div>
-                <div className={styles.heading}>
-                    <h1 className={styles.h1}>
-                        Lokal instrumentforretning i centrum af odense
-                    </h1>
-                    <p className={styles.p}>
-                        Med mange års erfaring i branchen er Musikhuset-Odense en af de førende instrumentforretninger i
-                        Danmark, med speciale i strenge- og strygerinstrumenter. Med vores helt særlige værksted og
-                        samarbejdspartnere er vi også med til at puste nyt liv i gamle instrumenter, der har tabt
-                        gnisten.
-                    </p>
-                    <div className={styles.review}>
-                        <p className={styles.p}>4.9 i Google Reviews</p>
-                        <div className={styles.stars}>
-                            <Image src={STAR} alt='star'/>
-                            <Image src={STAR} alt='star'/>
-                            <Image src={STAR} alt='star'/>
-                            <Image src={STAR} alt='star'/>
-                            <Image src={STAR} alt='star'/>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section className={styles.products}>
-                <h2 className={type.h2}>
-                    Stort udvalg af strenge- og strygerinstrumenter.
-                    <weak>Samt tilbehør til slagtøj, blæs, strygere og guitarer.</weak>
-                </h2>
-                <div className={styles.images}>
-                    <div className={styles.img}>
-                        <Image src={ACOUSTICS} alt='Sortiment i butikken' />
-                    </div>
-                    <div className={styles.img}>
-                        <Image src={VIOLINS} alt='Sortiment i butikken' />
-                    </div>
-                    <div className={styles.img}>
-                        <Image src={ELECTRICS} alt='Sortiment i butikken' />
-                    </div>
-                </div>
-                <p className={`${styles.p} ${type.p}`}>
-                    Musikhuset-Odense er en af de førende instrumentforretninger i
-                    Danmark, med speciale i strenge- og strygerinstrumenter. I vores
-                    sortiment finder du et bredt udvalg af elektriske og akkustiske guitarer
-                    — også til venstrehåndede musikere — akkustiske og elektriske violiner og
-                    celi, samt et særligt udvalg af alternative folkeinstrumenter og specialinstrumenter.
-                    <br/><br/>
-                    Uanset hvilket instrument du spiller har vi også et endog meget
-                    stort udvalg i tilbehør. Strenge, buer, skulderstøtter, ventilolie,
-                    dæmpere, mundstykker, skind, trommestikker, tasker, etuier, kabler,
-                    remme  m.m.
-                </p>
-                <Linker href='/' text='Læs mere om vores sortiment' arrow/>
-            </section>
-            <section className={styles.workshop}>
-                <div className={styles.heading}>
-                    <h2 className={styles.h2}>
-                        Reparation og justering af musikinstrumenter
-                    </h2>
-                    <p className={styles.p}>
-                        Claus Christiansen reparerer musikinstrumenter
-                        i vores værksted i Odense C. Vi kan både servicere
-                        nye og gamle instrumenter, omend der skal kigges på
-                        justering, reperation eller intonation af strengeinstrumenter,
-                        eller udskiftning af elektronik i pedaler, pickupper
-                        og lignende.
-                        <br/><br/>
-                        Kommer du forbi butikken, giver vi
-                        et uforpligtende tilbud på reperation eller justering af dit instrument.
-                    </p>
-                    <Linker href='/vaerksted' text='Læs mere om værkstedet' arrow/>
-                </div>
-                <div className={styles.img}>
-                    <Image src={WORKSHOP} alt='Claus i værkstedet' quality='100'/>
-                </div>
-            </section>
+            <SectionRenderer sections={Sections} />
             <section className={styles.brands}>
                 <div className={styles.inner}>
                     <div className={styles.img}><Image src={ALTA} alt='LOGO' /></div>

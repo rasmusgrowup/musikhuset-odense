@@ -2,6 +2,8 @@ import sections from "@/styles/sections.module.scss";
 import type from "@/styles/type.module.scss";
 import Image from "next/image";
 import Linker from "@/components/Linker";
+import styles from "@/styles/layout.module.scss";
+import STAR from "@/public/star.png";
 
 function Heading({ props, i }) {
     return (
@@ -14,8 +16,20 @@ function Heading({ props, i }) {
                 <p className={`${type.p} ${sections.p}`} key={i}>{text}</p>
             ))}
             { props.cta && props.cta.map((cta, i) => (
-                <Linker key={i} href={cta.href} text={cta.text}/>
+                <Linker key={i} href={cta.href} text={cta.text} arrow={cta.arrow}/>
             ))}
+            { props.review &&
+                <div className={styles.review}>
+                    <p className={styles.p}>4.9 i Google Reviews</p>
+                    <div className={styles.stars}>
+                        <Image src={STAR} alt='star'/>
+                        <Image src={STAR} alt='star'/>
+                        <Image src={STAR} alt='star'/>
+                        <Image src={STAR} alt='star'/>
+                        <Image src={STAR} alt='star'/>
+                    </div>
+                </div>
+            }
         </div>
     )
 }

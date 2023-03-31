@@ -143,6 +143,10 @@
   padding: 2rem;
   width: 100%;
 
+  @media (max-width: $m) {
+    padding: 2rem 0;
+  }
+
   .inner {
     align-items: center;
     display: flex;
@@ -160,6 +164,11 @@
       //transition-delay: 0.1s;
       transition-duration: .2s;
       transition-property: transform;
+
+      @media (max-width: $m) {
+        padding: 0 .5rem;
+        width: 120px;
+      }
 
       &:hover {
         transform: scale(1);

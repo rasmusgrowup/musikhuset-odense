@@ -7,7 +7,11 @@
 .top {
   border-bottom: var(--border);
   display: flex;
-  //height: 250px;
+
+  @media (max-width: $m) {
+    display: block;
+    padding-top: 1rem;
+  }
 
   .about,
   .contact,
@@ -16,6 +20,11 @@
     border-right: var(--border);
     flex: 1;
     padding: 2rem;
+
+    @media (max-width: $m) {
+      border: none;
+      padding: 2rem 1rem;
+    }
 
     a {
       display: block;
@@ -32,7 +41,6 @@
   }
 
   .about .p {
-    //font-size: 13px;
     line-height: 1.5;
   }
 
@@ -54,10 +62,14 @@
 
 .bottom {
   align-items: center;
-  //border-top: var(--border);
   display: flex;
   font-size: 14px;
   height: 100px;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 2rem 2rem 3rem;
+
+  @media (max-width: $m) {
+    flex-direction: column;
+    height: auto;
+  }
 }

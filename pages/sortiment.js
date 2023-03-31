@@ -25,7 +25,13 @@ const Sections = [
     },
     {
         type: 'bullets',
-        heading: 'Instrumentforretning, med et bredt og nøje udvalgt sortiment',
+        heading: 'Instrumentforretning, med et bredt og nøje udvalgt sortiment af speciel,- strenge- og strygerinstrumenter',
+        subheader:
+            'Herunder kan du læse mere om vores brede sortiment. Vi inviterer dig ' +
+            'ned i butikken for at føle og afprøve instrumenterne, og for at se, hvad ' +
+            'vi har på lager. Vi har ikke resurser til at drive en webshop — og vil desuden ' +
+            'heller ikke sælge instrumenter online — så du er velkommen til at kigge ned i butikken, ' +
+            'for at se det aktuelle udvalg. Der er altid kaffe på kanden.',
         inners: [
             {
                 inner: 'Strengeinstrumenter',

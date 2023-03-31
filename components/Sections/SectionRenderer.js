@@ -3,6 +3,7 @@ import Half from "@/components/Sections/Half";
 import Fourths from "@/components/Sections/Fourths";
 import Bullets from "@/components/Sections/Bullets";
 import News from "@/components/Sections/News";
+import Products from "@/components/Sections/Products";
 
 export default function SectionRenderer({ sections }) {
     return (
@@ -19,6 +20,8 @@ export default function SectionRenderer({ sections }) {
                         return <Bullets key={i} section={section} i={i} />
                     case 'news':
                         return <News key={i} section={section} i={i} />
+                    case 'products':
+                        return <Products key={i} section={section} i={i} />
                     default:
                         return <section key={i}>default block</section>
                 }

@@ -11,6 +11,7 @@
   --grey-darker: rgb(160, 160, 160);
   --grey: rgb(245, 245, 245);
   --red: #E31E25;
+  --white: #fff;
   --border: 1px solid var(--border-color);
 }
 

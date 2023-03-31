@@ -67,7 +67,7 @@ export default function Footer() {
             <div className={styles.bottom}>
                 <div>©{new Date().getFullYear()} Musikhuset-Odense Aps</div>
                 <div><Link href={mapUrl} target='_blank'>Skibhusvej 66, Skibhustorvet, 5000 Odense C</Link></div>
-                <div>Udviklet af <Link href='https://rasmusholberg.dk'>rasmusholberg.dk</Link></div>
+                <div>Udviklet af <Link href='https://rasmusholberg.dk' target='_blank'>rasmusholberg.dk</Link></div>
             </div>
         </footer>
     )

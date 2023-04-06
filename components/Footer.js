@@ -46,16 +46,15 @@ export default function Footer() {
                     <p className={type.p}><strong>Kontaktoplysninger</strong></p>
                     <p className={styles.name}>Claus Vang</p>
                     <Link href='tel:+4540165490'>+45 4016 5490</Link>
-                    <p className={styles.name}>Claus Christiansen</p>
-                    <Link href='tel:+4529107940'>+45 2910 7940</Link>
+                    { /* <p className={styles.name}>Claus Christiansen</p>
+                    <Link href='tel:+4529107940'>+45 2910 7940</Link> */ }
                     <p className={styles.name}>Bogholder</p>
                     <Link href='mailto:ebh@Musikhuset-Odense.dk'>ebh@musikhuset-odense.dk</Link>
                 </div>
                 <div className={styles.info}>
                     <p className={styles.p}><strong>Åbningstider</strong></p>
-                    <div><span>Mandag</span><span>Efter aftale</span></div>
-                    <div><span>Tirsdag-fredag</span><span>10.00-17.30</span></div>
-                    <div><span>Lørdag</span><span>10.00-15.00</span></div>
+                    <div><span>Mandag-fredag</span><span>10.00-17.30</span></div>
+                    <div><span>Lørdag</span><span>10.00-14.00</span></div>
                 </div>
                 <div className={styles.nav}>
                     <p className={styles.p}><strong>Navigation</strong></p>
@@ -65,7 +64,7 @@ export default function Footer() {
                 </div>
             </div>
             <div className={styles.bottom}>
-                <div>©{new Date().getFullYear()} Musikhuset-Odense Aps</div>
+                <div>©{new Date().getFullYear()} Musikhuset-Odense v/ Claus Vang</div>
                 <div><Link href={mapUrl} target='_blank'>Skibhusvej 66, Skibhustorvet, 5000 Odense C</Link></div>
                 <div>Udviklet af <Link href='https://rasmusholberg.dk' target='_blank'>rasmusholberg.dk</Link></div>
             </div>

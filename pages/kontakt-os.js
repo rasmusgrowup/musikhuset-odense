@@ -11,7 +11,7 @@ const Sections = [{
             alt: 'Claus Vang'
         },
         text: [
-            'Claus Vang er butiksindehaver, og musiker gennem mange år.',
+            'Claus Vang er butiksindehaver, står for den daglige drift i butikken, og har været udøvende musiker gennem 5 årtier.',
         ],
         cta: [
         {
@@ -33,15 +33,8 @@ const Sections = [{
             alt: 'Claus Holm'
         },
         text: [
-            'Claus Christiansen arbejder på værkstedet, hvor han passioneret reparerer og justerer instrumenter.',
-        ],
-        cta: [
-            {
-                type: 'link',
-                href: 'tel:+4529107940',
-                text: '+45 2910 7940'
-            },
-        ],
+            'Claus Christiansen arbejder på værkstedet, hvor han passioneret reparerer og justerer instrumenter og elektronik.',
+        ]
     }],
 }]
 

@@ -75,8 +75,8 @@ const Sections = [
             }
         ],
         text: [
-            'Musikhuset-Odense er en af de førende instrumentforretninger i Danmark, med speciale i strenge- og strygerinstrumenter. I vores sortiment finder du et bredt udvalg af elektriske og akkustiske guitarer — også til venstrehåndede musikere — akkustiske og elektriske violiner og celi, samt et særligt udvalg af alternative folkeinstrumenter og specialinstrumenter.',
-            'Uanset hvilket instrument du spiller har vi også et endog meget stort udvalg i tilbehør. Strenge, buer, skulderstøtter, ventilolie, dæmpere, mundstykker, skind, trommestikker, tasker, etuier, kabler, remme m.m.'
+            'Musikhuset-Odense er en af de førende instrumentforretninger i Danmark, med speciale i strenge- og strygerinstrumenter. I vores sortiment finder du et bredt udvalg af elektriske og akkustiske guitarer, violiner og celli — også i venstrehåndede, 3/4 og 1/2 modeller — samt et særligt udvalg af alternative folkeinstrumenter og specialinstrumenter.',
+            'Uanset hvilket instrument du spiller har vi også et endog meget stort udvalg i tilbehør. Strenge, buer, skulderstøtter, nodestativer, nodelamper, ventilolie, sordiner, blæserblade, skind, percussion, trommestikker, tasker, etuier, kabler, remme, forstærkere m.m.'
         ],
         cta: [
             {

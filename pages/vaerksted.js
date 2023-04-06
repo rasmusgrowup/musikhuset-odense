@@ -10,7 +10,7 @@ const Sections = [{
         alt: 'Claus Holm i værkstedet i Musikhuset-Odense'
     },
     text: [
-        'Claus Christiansen reparerer musikinstrumenter i vores værksted i Odense C. Vi kan både servicere nye og gamle instrumenter, omend der skal kigges på justering, reperation eller intonation af strengeinstrumenter, eller udskiftning af elektronik i pedaler, pickupper og lignende.',
+        'Claus Christiansen reparerer musikinstrumenter i vores værksted. Vi kan både servicere nye og gamle instrumenter, uanset om der skal kigges på justering, reperation eller intonation af strengeinstrumenter, eller udskiftning af elektronik i pedaler, pickupper og lignende.',
         'Kommer du forbi butikken, giver vi et uforpligtende tilbud på reperation eller justering af dit instrument.',
     ],
     cta: [

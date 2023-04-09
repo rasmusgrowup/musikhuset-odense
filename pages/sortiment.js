@@ -11,7 +11,7 @@ const Sections = [
             alt: 'Musikhuset-Odense'
         },
         text: [
-            'I vores sortiment af instrumenter, finder du et bredt udvalg af elektriske og akkustiske guitarer — også til venstrehåndede musikere — akkustiske og elektriske violiner og celi, samt et særligt udvalg af alternative folkeinstrumenter og specialinstrumenter.',
+            'I vores sortiment finder du et bredt udvalg af elektriske og akkustiske guitarer, violiner og celli — også i venstrehåndede, 3/4 og 1/2 modeller — samt et særligt udvalg af alternative folkeinstrumenter og specialinstrumenter.',
             'Vi har desuden et godt udvalg af markedets bedste strenge, buer, slagtøjstilbehør, nodebøger, pedaler og forstærkere.',
             'Vi inviterer dig ned forbi butikken for at afprøve dit nye instrument — kun sådan ved du, om kemien mellem dig og instrument er tilstede. Inden da, kan du læse mere om vores sortiment herunder.',
         ],

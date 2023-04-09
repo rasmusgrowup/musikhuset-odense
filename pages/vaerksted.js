@@ -16,8 +16,8 @@ const Sections = [{
     cta: [
         {
             type: 'link',
-            href: 'tel:+4529107940',
-            text: 'Kontakt værkstedet på: +45 2910 7940'
+            href: 'tel:+4540165490',
+            text: 'Kontakt butikken her'
         }
     ]
 }]

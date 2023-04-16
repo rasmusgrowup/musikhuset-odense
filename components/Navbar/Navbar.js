@@ -36,7 +36,7 @@ export default function Navbar() {
     const router = useRouter();
     const [menuVisible, setMenuVisible] = useState(false);
 
-    console.log(router.pathname)
+    //console.log(router.pathname)
     return (
         <nav className={styles.nav}>
             <div className={styles.main}>

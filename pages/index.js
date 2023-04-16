@@ -39,6 +39,9 @@ import PIRASTRO from '@/public/brands/Pirastro.jpg'
 import SHUBB from '@/public/brands/Shubb_logo.png'
 import MXR from '@/public/brands/MXR_Logo.png'
 import DUNLOP from '@/public/brands/DUNLOP_Logo.png'
+import GODIN from '@/public/brands/Godin_Logo.png'
+import VANDOREN from '@/public/brands/Vandoren_Logo.jpg'
+import EVERDEEN from '@/public/brands/Everdeen_Logo.jpg'
 
 import SectionRenderer from "@/components/Sections/SectionRenderer";
 
@@ -75,7 +78,7 @@ const Sections = [
             }
         ],
         text: [
-            'Musikhuset-Odense er en af de førende instrumentforretninger i Danmark, med speciale i strenge- og strygerinstrumenter. I vores sortiment finder du et bredt udvalg af elektriske og akkustiske guitarer, violiner og celli — også i venstrehåndede, 3/4 og 1/2 modeller — samt et særligt udvalg af alternative folkeinstrumenter og specialinstrumenter.',
+            'Musikhuset-Odense er en af de førende instrumentforretninger i Danmark, med speciale i strenge- og strygerinstrumenter. I vores sortiment finder du et bredt udvalg af elektriske og akkustiske guitarer, violiner og celli — også i venstrehåndede, 1/2, 3/4 og 1/4 modeller — samt et særligt udvalg af alternative folkeinstrumenter og specialinstrumenter.',
             'Uanset hvilket instrument du spiller har vi også et endog meget stort udvalg i tilbehør. Strenge, buer, skulderstøtter, nodestativer, nodelamper, ventilolie, sordiner, blæserblade, skind, percussion, trommestikker, tasker, etuier, kabler, remme, forstærkere m.m.'
         ],
         cta: [
@@ -148,6 +151,9 @@ export default function Home() {
                     <div className={styles.img}><Image src={SHUBB} alt='LOGO' /></div>
                     <div className={styles.img}><Image src={MXR} alt='LOGO' /></div>
                     <div className={styles.img}><Image src={DUNLOP} alt='LOGO' /></div>
+                    <div className={styles.img}><Image src={GODIN} alt='LOGO' /></div>
+                    <div className={styles.img}><Image src={VANDOREN} alt='LOGO' /></div>
+                    <div className={styles.img}><Image src={EVERDEEN} alt='LOGO' /></div>
                 </div>
             </section>
         </>

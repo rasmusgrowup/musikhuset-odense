@@ -37,7 +37,7 @@
 .half {
   border-bottom: var(--border);
   display: flex;
-  height: 42vw;
+  min-height: 42vw;
   position: relative;
 
   @media (max-width: $m) {
@@ -47,17 +47,19 @@
   .img {
     flex: 1;
     max-width: 50%;
+    position: relative;
 
     @media (max-width: $m) {
       border-bottom: var(--border);
       max-width: none;
-      height: 42vh;
+      height: 65vw;
     }
 
     img {
       display: block;
       height: 100%;
       object-fit: cover;
+      position: absolute;
       width: 100%;
     }
   }
@@ -111,6 +113,10 @@
   }
 }
 
+.left {
+  // styling for left aligned section
+}
+
 .fourths {
   display: flex;
 
@@ -119,8 +125,21 @@
   }
 
   .half {
+    display: flex;
     flex: 1;
     height: 34vw;
+
+    @media (min-width: $s) and (max-width: $m) {
+      border-bottom: none;
+
+      .img {
+        min-width: 50%;
+      }
+    }
+
+    @media (max-width: $s) {
+      display: initial;
+    }
 
     @media (max-width: $m) {
       height: auto;
@@ -144,6 +163,19 @@
 
       .img {
         height: 56vh;
+      }
+    }
+
+    @media (min-width: $s) and (max-width: $m) {
+      &:after {
+        background-color: var(--border-color);
+        content: '';
+        height: 100%;
+        left: 50%;
+        position: absolute;
+        top: 0;
+        width: 1px;
+        transform: translateX(-50%);
       }
     }
   }

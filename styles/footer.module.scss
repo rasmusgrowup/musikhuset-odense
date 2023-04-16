@@ -47,6 +47,14 @@
   .info div {
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: $m) {
+      justify-content: flex-start;
+    }
+
+    span:first-of-type {
+      margin-right: 0.5em;
+    }
   }
 
   .nav {
@@ -71,5 +79,6 @@
   @media (max-width: $m) {
     flex-direction: column;
     height: auto;
+    padding: 2rem;
   }
 }

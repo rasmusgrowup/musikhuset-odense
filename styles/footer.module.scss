@@ -74,11 +74,10 @@
   font-size: 14px;
   height: 100px;
   justify-content: space-between;
-  padding: 2rem 2rem 3rem;
+  padding: 2rem;
 
   @media (max-width: $m) {
     flex-direction: column;
     height: auto;
-    padding: 2rem;
   }
 }

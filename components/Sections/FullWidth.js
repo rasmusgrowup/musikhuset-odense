@@ -7,13 +7,13 @@ import 'moment/locale/da';
 export default function FullWidth({ section, i }) {
     return (
         <section key={i} className={sections.fullWidth}>
-            { i === 0
+            {section.heading && i === 0
                 ? <h1 className={`${type.h1} ${sections.h1}`}>{section.heading}</h1>
                 : <h2 className={`${type.h2} ${sections.h2}`}>{section.heading}</h2>
             }
             { section.image &&
                 <div className={sections.img}>
-                    <Image src={section.image.url} alt={section.image.alt} priority={i === 0} width={section.image.width} height={section.image.height} quality='100'/>
+                    <Image src={section.image.url} alt={section.image.altText} priority={i === 0} width={section.image.width} height={section.image.height} quality='100'/>
                 </div>
             }
             {section.text && <div className={`${type.p} ${sections.p}`} dangerouslySetInnerHTML={{__html: `${section.text.html}`}} />}

@@ -1,6 +1,8 @@
 import sections from "@/styles/sections.module.scss";
 import type from "@/styles/type.module.scss";
 import Image from "next/image";
+import Moment from "react-moment";
+import 'moment/locale/da';
 
 export default function FullWidth({ section, i }) {
     return (
@@ -11,12 +13,11 @@ export default function FullWidth({ section, i }) {
             }
             { section.image &&
                 <div className={sections.img}>
-                    <Image src={section.image.url} alt={section.image.alt} priority={i === 0} quality='100'/>
+                    <Image src={section.image.url} alt={section.image.alt} priority={i === 0} width={section.image.width} height={section.image.height} quality='100'/>
                 </div>
             }
-            { section.text.map((text, i) => (
-                <p className={`${type.p} ${sections.p}`} key={i}>{text}</p>
-            ))}
+            {section.text && <div className={`${type.p} ${sections.p}`} dangerouslySetInnerHTML={{__html: `${section.text.html}`}} />}
+            {section.createdAt && <div className={`${type.p} ${sections.p}`} style={{ opacity: '0.5'}}>Udgivet d. <Moment date={section.createdAt} locale='da' format='ll'/></div>}
         </section>
     )
 }

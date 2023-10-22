@@ -20,12 +20,8 @@ export default function Products({section, i}) {
                         </div>
                     ))}
                 </div>
-                {section.text.map((text, i) => (
-                    <p className={`${type.p} ${sections.p}`} key={i}>{text}</p>
-                ))}
-                { section.cta && section.cta.map((cta, i) => (
-                    <Linker key={i} href={cta.href} text={cta.text} arrow/>
-                ))}
+                {section.text && <div className={`${type.p} ${sections.p}`} dangerouslySetInnerHTML={{__html: `${section.text.html}`}}/>}
+                {section.cta &&<Linker key={i} href={section.cta.href} text={section.cta.ctaText} arrow={'true'}/>}
             </section>
         </>
     )

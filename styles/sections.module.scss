@@ -21,6 +21,10 @@
     margin: 0 auto 1em;
     max-width: 600px;
     text-align: left;
+
+    p {
+      margin-bottom: 1rem;
+    }
   }
 }
 
@@ -84,7 +88,7 @@
       margin-bottom: 2rem;
     }
 
-    .p {
+    .p p {
       margin-bottom: 1em;
     }
 
@@ -220,6 +224,10 @@
 
     .bulletText {
       flex: 3;
+
+      p {
+        margin-bottom: 1rem;
+      }
     }
   }
 }

@@ -1,10 +1,5 @@
 import Image from 'next/image'
 import styles from '@/styles/layout.module.scss'
-import ClausVang from '@/public/Musikhuset-Odense-251.jpg'
-import SpanskeGuitarer from '@/public/Musikhuset-Odense-413.jpg'
-import Violiner from '@/public/Musikhuset-Odense-190.jpg'
-import ElektriskeGuitarer from '@/public/Musikhuset-Odense-171.jpg'
-import Vaerksted from '@/public/Musikhuset-Odense-256.jpg'
 
 import ALTA from '@/public/brands/Admira-Logo.png'
 import GEWA from '@/public/brands/Gewa-Guitars-Logo.png'
@@ -44,78 +39,25 @@ import VANDOREN from '@/public/brands/Vandoren_Logo.jpg'
 import EVERDEEN from '@/public/brands/Everdeen_Logo.jpg'
 
 import SectionRenderer from "@/components/Sections/SectionRenderer";
+import {getPage} from "@/lib/hygraph";
+import Meta from "@/components/Meta";
 
-const Sections = [
-    {
-        type: 'half',
-        align: 'right',
-        heading: 'Lokal instrumentforretning i centrum af odense',
-        image: {
-            url: ClausVang,
-            alt: 'Claus Vang fra Musikehuset-Odense'
+export async function getStaticProps() {
+    const {page} = await getPage("forside");
+
+    return {
+        props: {
+            page
         },
-        text: [
-            'Med mange års erfaring i branchen er Musikhuset-Odense en af de førende instrumentforretninger i Danmark, med speciale i strenge- og strygerinstrumenter. Med vores helt særlige værksted og samarbejdspartnere er vi også med til at puste nyt liv i gamle instrumenter, der har tabt gnisten.'
-        ],
-        review: true
-    },
-    {
-        type: 'products',
-        heading: 'Stort udvalg af strenge- og strygerinstrumenter.',
-        smallHeading: 'Samt tilbehør til slagtøj, blæs, strygere og guitarer.',
-        images: [
-            {
-                url: SpanskeGuitarer,
-                alt: 'Spanske Guitarer i Musikhuset-Odense'
-            },
-            {
-                url: Violiner,
-                alt: 'Akkustiske violiner i Musikhuset-Odense'
-            },
-            {
-                url: ElektriskeGuitarer,
-                alt: 'Elektriske Guitarer i Musikhuset-Odense'
-            }
-        ],
-        text: [
-            'Musikhuset-Odense er en af de førende instrumentforretninger i Danmark, med speciale i strenge- og strygerinstrumenter. I vores sortiment finder du et bredt udvalg af elektriske og akkustiske guitarer, violiner og celli — også i venstrehåndede, 1/2, 3/4 og 1/4 modeller — samt et særligt udvalg af alternative folkeinstrumenter og specialinstrumenter.',
-            'Uanset hvilket instrument du spiller har vi også et endog meget stort udvalg i tilbehør. Strenge, buer, skulderstøtter, nodestativer, nodelamper, ventilolie, sordiner, blæserblade, skind, percussion, trommestikker, tasker, etuier, kabler, remme, forstærkere m.m.'
-        ],
-        cta: [
-            {
-                type: 'link',
-                href: '/sortiment',
-                text: 'Læs mere om vores sortiment',
-            }
-        ]
-    },
-    {
-        type: 'half',
-        align: 'left',
-        heading: 'Reparation og justering af musikinstrumenter',
-        image: {
-            url: Vaerksted,
-            alt: 'Claus fra værkstedet i Musikhuset-Odense'
-        },
-        text: [
-            'Claus Christiansen reparerer musikinstrumenter i vores værksted i Odense C. Vi kan både servicere nye og gamle instrumenter, omend der skal kigges på justering, reperation eller intonation af strengeinstrumenter, eller udskiftning af elektronik i pedaler, pickupper og lignende.',
-            'Kommer du forbi butikken, giver vi et uforpligtende tilbud på reperation eller justering af dit instrument.'
-        ],
-        cta: [
-            {
-                type: 'link',
-                href: '/vaerksted',
-                text: 'Læs mere om værkstedet',
-                arrow: true
-            }
-        ]
     }
-]
+}
 
-export default function Home() {
+export default function Home({page}) {
+
     return (
         <>
-            <SectionRenderer sections={Sections} />
+            <Meta description={page.pageDescription}/>
+            <SectionRenderer sections={page.sections} />
             <section className={styles.brands}>
                 <div className={styles.inner}>
                     <div className={styles.img}><Image src={ALTA} alt='LOGO' /></div>

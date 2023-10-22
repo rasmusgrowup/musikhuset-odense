@@ -1,5 +1,6 @@
 import SectionRenderer from "@/components/Sections/SectionRenderer";
 import ClausHolm from '@/public/Musikhuset-Odense-282.jpg'
+import {getPage} from "@/lib/hygraph";
 
 const Sections = [{
     type: 'half',
@@ -22,10 +23,20 @@ const Sections = [{
     ]
 }]
 
-export default function Page() {
+export async function getStaticProps() {
+    const {page} = await getPage("vaerksted");
+
+    return {
+        props: {
+            page
+        },
+    }
+}
+
+export default function Page({page}) {
     return (
         <>
-            <SectionRenderer sections={Sections} />
+            <SectionRenderer sections={page.sections} />
         </>
     )
 }

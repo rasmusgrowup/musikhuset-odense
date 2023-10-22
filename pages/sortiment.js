@@ -1,5 +1,6 @@
 import SectionRenderer from "@/components/Sections/SectionRenderer";
 import Shop from '@/public/Musikhuset-Odense-168.jpg'
+import {getPage} from "@/lib/hygraph";
 
 const Sections = [
     {
@@ -40,7 +41,9 @@ const Sections = [
                         heading: 'Guitarer — Akkustiske, elektriske, spanske og western',
                         text:
                             <p>
-                                I vores sortiment af instrumenter, finder du et bredt udvalg af <strong>elektriske</strong> og akkustiske guitarer — også til venstrehåndede musikere — akkustiske og elektriske violiner og celi, samt et særligt udvalg af alternative folkeinstrumenter og specialinstrumenter.
+                                Hos Musikhuset-Odense har vi altid mindst 70 guitarer, fordelt på akustiske, elektriske, western og spanske modeller. Vi fører modeller fra Ibanez, Santana, Tanglewood, Godin, Ortega, Tyma, Blueridge, Music Man m.fl.
+
+                                Vi fører ligeledes mange ‘speciel’ modeller, fx. guitarer i 1/2, 3/4 og 1/4 størrelser, og til venstrehåndede musikere.
                             </p>
                     },
                     {
@@ -122,10 +125,21 @@ const Sections = [
     }
 ]
 
-export default function Page() {
+export async function getStaticProps() {
+    const {page} = await getPage("sortiment");
+
+    return {
+        props: {
+            page
+        },
+    }
+}
+
+export default function Page({page}) {
+
     return (
         <>
-            <SectionRenderer sections={Sections} />
+            <SectionRenderer sections={page.sections} />
         </>
     )
 }

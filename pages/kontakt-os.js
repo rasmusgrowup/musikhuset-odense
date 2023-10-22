@@ -1,6 +1,7 @@
 import SectionRenderer from "@/components/Sections/SectionRenderer";
 import ClausVang from '@/public//Musikhuset-Odense-122.jpg'
 import ClausHolm from '@/public//Musikhuset-Odense-150.jpg'
+import {getPage} from "@/lib/hygraph";
 
 const Sections = [{
     type: 'fourths',
@@ -38,10 +39,21 @@ const Sections = [{
     }],
 }]
 
-export default function Page() {
+export async function getStaticProps() {
+    const {page} = await getPage("kontakt-os");
+
+    return {
+        props: {
+            page
+        },
+    }
+}
+
+export default function Page({ page }) {
+    console.log(page)
     return (
         <>
-            <SectionRenderer sections={Sections} />
+            <SectionRenderer sections={page.sections} />
         </>
     )
 }

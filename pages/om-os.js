@@ -1,5 +1,6 @@
 import SectionRenderer from "@/components/Sections/SectionRenderer";
 import Shop from '@/public//Musikhuset-Odense-101-2.jpg'
+import {getPage} from "@/lib/hygraph";
 
 const Sections = [{
     type: 'fullwidth',
@@ -22,10 +23,21 @@ const Sections = [{
     ]
 }]
 
-export default function Page() {
+export async function getStaticProps() {
+    const {page} = await getPage("om-os");
+
+    return {
+        props: {
+            page
+        },
+    }
+}
+
+export default function Page({ page }) {
+    console.log(page)
     return (
         <>
-            <SectionRenderer sections={Sections} />
+            <SectionRenderer sections={page.sections} />
         </>
     )
 }

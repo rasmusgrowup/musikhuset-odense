@@ -12,12 +12,8 @@ function Heading({ props, i }) {
                 ? <h1 className={`${type.h1} ${sections.h1}`}>{props.heading}</h1>
                 : <h2 className={`${type.h2} ${sections.h2}`}>{props.heading}</h2>
             }
-            { props.text.map((text, i) => (
-                <p className={`${type.p} ${sections.p}`} key={i}>{text}</p>
-            ))}
-            { props.cta && props.cta.map((cta, i) => (
-                <Linker key={i} href={cta.href} text={cta.text} arrow={cta.arrow}/>
-            ))}
+            {props.text && <div className={`${type.p} ${sections.p}`} dangerouslySetInnerHTML={{__html: `${props.text.html}`}}/>}
+            {props.cta &&<Linker key={i} href={props.cta.href} text={props.cta.ctaText} arrow={'true'}/>}
             { props.review &&
                 <div className={styles.review}>
                     <p className={styles.p}>4.9 i Google Reviews</p>
@@ -34,12 +30,14 @@ function Heading({ props, i }) {
     )
 }
 
-function ImageContainer({ props, i }) {
+function ImageContainer({ image, i }) {
     return (
         <div className={sections.img}>
             <Image
-                src={props.image.url}
-                alt={props.image.alt}
+                src={image.url}
+                alt={image.alt}
+                width={'1000'}
+                height={'700'}
                 quality='100'
                 priority={ i === 0 }
                 sizes="
@@ -52,10 +50,10 @@ function ImageContainer({ props, i }) {
 
 export default function Half({ section, i }) {
     return (
-        <section key={i} className={section.align === 'left' ? `${sections.half} ${sections.left}` : `${sections.half} ${sections.right}`}>
-            { section.align === 'left'
-                ? <><Heading props={section} i={i} /><ImageContainer props={section} i={i} /></>
-                : <><ImageContainer props={section} i={i} /><Heading props={section} i={i} /></>
+        <section key={i} className={section.align ? `${sections.half} ${sections.left}` : `${sections.half} ${sections.right}`}>
+            { section.align
+                ? <><Heading props={section} i={i} /><ImageContainer image={section.image} i={i} /></>
+                : <><ImageContainer image={section.image} i={i} /><Heading props={section} i={i} /></>
             }
         </section>
     )

@@ -6,21 +6,20 @@ import News from "@/components/Sections/News";
 import Products from "@/components/Sections/Products";
 
 export default function SectionRenderer({ sections }) {
+
     return (
         <>
             { sections && sections.map((section, i) => {
-                switch (section.type) {
-                    case 'fullwidth':
+                switch (section.__typename) {
+                    case 'FullWidthSection':
                         return <FullWidth key={i} section={section} i={i} />
-                    case 'half':
+                    case 'HalfSection':
                         return <Half key={i} section={section} i={i} />
-                    case 'fourths':
+                    case 'FourthSection':
                         return <Fourths key={i} section={section} i={i} />
-                    case 'bullets':
+                    case 'BulletsSection':
                         return <Bullets key={i} section={section} i={i} />
-                    case 'news':
-                        return <News key={i} section={section} i={i} />
-                    case 'products':
+                    case 'ProductsSection':
                         return <Products key={i} section={section} i={i} />
                     default:
                         return <section key={i}>default block</section>

@@ -49,7 +49,7 @@ export default function Navbar() {
                     </h1>
                 </div>
                 <div className={styles.mobileMenuBtn} onClick={() => setMenuVisible(!menuVisible)}>
-                    Menu
+                    {menuVisible ? "Luk" : "Menu"}
                 </div>
                 <div className={ menuVisible ? `${styles.menuWrapper} ${styles.visible}` : `${styles.menuWrapper} ${styles.notVisible}`}>
                     <div className={styles.menu}>

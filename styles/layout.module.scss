@@ -1,7 +1,12 @@
 @import "core";
 
 .main {
+  margin-top: 115px;
   position: relative;
+
+  @media (max-width: $m) {
+    margin-top: 100px;
+  }
 }
 
 .hero,

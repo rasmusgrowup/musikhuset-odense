@@ -70,7 +70,7 @@ export default function Navbar() {
                         <div className={styles.flex}><span>Lørdag</span><span>10.00-14.00</span></div>
                         { /* <div className={styles.flex}><span>Søndag / helligdage</span><span>Lukket</span></div> */ }
                         <div className={`${styles.flex} ${styles.mt}`}><span>Tlf.: </span><Link href='tel:+4540165490'>+45 4016 5490</Link></div>
-                        <div className={styles.flex}><span>Mail: </span><Link href='mailto:cv@musikhusetodense.dk'>cv@musikhusetodense.dk</Link></div>
+                        <div className={styles.flex}><span>Mail: </span><Link href='mailto:cv@musikhuset-odense.dk'>cv@musikhuset-odense.dk</Link></div>
                     </div>
                 </div>
             </div>

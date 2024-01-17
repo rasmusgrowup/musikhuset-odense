@@ -386,3 +386,17 @@
     }
   }
 }
+
+.banner {
+  border-bottom: var(--border);
+  border-top: var(--border);
+  margin-top: -1px;
+  //padding: 1rem;
+  text-align: center;
+
+  .inner {
+    //border: var(--border);
+    //border-radius: 1rem;
+    padding: 4rem 2rem;
+  }
+}

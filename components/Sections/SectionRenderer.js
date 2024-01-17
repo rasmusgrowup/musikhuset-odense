@@ -4,6 +4,7 @@ import Fourths from "@/components/Sections/Fourths";
 import Bullets from "@/components/Sections/Bullets";
 import News from "@/components/Sections/News";
 import Products from "@/components/Sections/Products";
+import Banner from "@/components/Sections/Banner";
 
 export default function SectionRenderer({ sections }) {
 
@@ -21,6 +22,8 @@ export default function SectionRenderer({ sections }) {
                         return <Bullets key={i} section={section} i={i} />
                     case 'ProductsSection':
                         return <Products key={i} section={section} i={i} />
+                    case 'Banner':
+                        return <Banner key={i} section={section} i={i} />
                     default:
                         return <section key={i}>default block</section>
                 }

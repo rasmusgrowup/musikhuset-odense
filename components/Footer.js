@@ -33,7 +33,7 @@ const Links = [
 
 export default function Footer() {
     const router = useRouter();
-    const mapUrl = 'https://www.google.dk/maps/place/Skibhusvej+66,+5000+Odense/@55.4063149,10.3906251,17z/data=!3m1!4b1!4m5!3m4!1s0x464ce000176e92ed:0x9509b610b65f33a!8m2!3d55.4063119!4d10.3928138'
+    const mapUrl = 'https://www.google.dk/maps/place/st,+Overgade+52,+5000+Odense/@55.3979563,10.3917346,17z/data=!3m1!4b1!4m6!3m5!1s0x464d20071f7aa88b:0x58f6cbfa3cd8c1!8m2!3d55.3979563!4d10.3943095!16s%2Fg%2F11bw4nps1m?entry=ttu'
 
     return (
         <footer className={styles.main}>
@@ -65,7 +65,7 @@ export default function Footer() {
             </div>
             <div className={styles.bottom}>
                 <div>©{new Date().getFullYear()} Musikhuset-Odense v/ Claus Vang</div>
-                <div><Link href={mapUrl} target='_blank'>Skibhusvej 66, Skibhustorvet, 5000 Odense C</Link></div>
+                <div><Link href={mapUrl} target='_blank'>Overgade 52, 5000 Odense C</Link></div>
                 <div>Udviklet af <Link href='https://rasmusholberg.dk' target='_blank'>rasmusholberg.dk</Link></div>
             </div>
         </footer>

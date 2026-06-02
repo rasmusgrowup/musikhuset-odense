@@ -33,17 +33,21 @@ function Heading({ props, i }) {
 function ImageContainer({ image, i }) {
     return (
         <div className={sections.img}>
-            <Image
-                src={image.url}
-                alt={image.alt}
-                width={'1000'}
-                height={'700'}
-                quality='100'
-                priority={ i === 0 }
-                sizes="
+            {image?.url ?
+                <Image
+                    src={image.url}
+                    alt={image.alt}
+                    width={'1000'}
+                    height={'700'}
+                    quality='100'
+                    priority={ i === 0 }
+                    sizes="
                     (max-width: 844px) 100vw,
                     50vw"
-            />
+                />
+                :
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', width: '100%' }}>Billede på vej</div>
+            }
         </div>
     )
 }

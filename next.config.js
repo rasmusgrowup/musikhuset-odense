@@ -2,8 +2,17 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['media.graphassets.com', 'media.graphcms.com']
-  }
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**.graphassets.com',
+      },
+      {
+        protocol: 'https',
+        hostname: '**.graphcms.com',
+      },
+    ],
+  },
 }
 
 module.exports = nextConfig

@@ -53,8 +53,9 @@ export default function Footer() {
                 </div>
                 <div className={styles.info}>
                     <p className={styles.p}><strong>Åbningstider</strong></p>
-                    <div><span>Mandag-fredag</span><span>10.00-17.30</span></div>
-                    <div><span>Lørdag</span><span>10.00-14.00</span></div>
+                    <div><span><i>Begrænsede åbningstider i Juno og Juli grundet sygdom</i></span></div>
+                    <div><span>Mandag-torsdag</span><span>13.00-17.00</span></div>
+                    <div><span>Fredag-lørdag</span><span>Lukket</span></div>
                 </div>
                 <div className={styles.nav}>
                     <p className={styles.p}><strong>Navigation</strong></p>

@@ -66,7 +66,7 @@ export default function Navbar() {
                         </div>
                     </div>
                     <div className={styles.info}>
-                        <div className={styles.flex}><span><i>Begrænset åbningstid i Juni og juli grundet sygdom</i></span></div>
+                        <div className={styles.flex}><span><i>Begrænset åbningstid grundet sygdom</i></span></div>
                         <div className={styles.flex}><span>Mandag-torsdag</span><span>13.00-17.00</span></div>
                         <div className={styles.flex}><span>Fredag-lørdag</span><span>Lukket</span></div>
                         <div className={`${styles.flex} ${styles.mt}`}><span>Tlf.: </span><Link href='tel:+4540165490'>+45 4016 5490</Link></div>

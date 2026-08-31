@@ -46,14 +46,12 @@ export default function Footer() {
                     <p className={type.p}><strong>Kontaktoplysninger</strong></p>
                     <p className={styles.name}>Claus Vang</p>
                     <Link href='tel:+4540165490'>+45 4016 5490</Link>
-                    { /* <p className={styles.name}>Claus Christiansen</p>
-                    <Link href='tel:+4529107940'>+45 2910 7940</Link> */ }
                     <p className={styles.name}>Bogholder</p>
                     <Link href='mailto:ebh@Musikhuset-Odense.dk'>ebh@musikhuset-odense.dk</Link>
                 </div>
                 <div className={styles.info}>
                     <p className={styles.p}><strong>Åbningstider</strong></p>
-                    <div><span><i>Begrænsede åbningstider i Juni og Juli grundet sygdom</i></span></div>
+                    <div><span><i>Begrænsede åbningstider grundet sygdom</i></span></div>
                     <div><span>Mandag-torsdag</span><span>13.00-17.00</span></div>
                     <div><span>Fredag-lørdag</span><span>Lukket</span></div>
                 </div>
